@@ -11,7 +11,7 @@ jobs:
       - checkout
       - run:
           name: Create environment
-          command: conda env create -n ci-env python=3.7
+          command: conda create -n ci-env python=3.7
       - run:
           name: run notebooks
           command: |
