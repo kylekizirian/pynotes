@@ -16,9 +16,9 @@ jobs:
           name: run notebooks
           command: |
             source activate ci-env
-            jupyter nbconvert --to notebook --execute src/classes.ipynb
-            jupyter nbconvert --to notebook --execute src/files.ipynb
-            jupyter nbconvert --to notebook --execute src/iteration.ipynb
-            jupyter nbconvert --to notebook --execute src/printing.ipynb
-            jupyter nbconvert --to notebook --execute src/regex.ipynb
-            jupyter nbconvert --to notebook --execute src/threading.ipynb
+            jupyter nbconvert --to notebook --execute ipynb/classes.ipynb
+            jupyter nbconvert --to notebook --execute ipynb/files.ipynb
+            jupyter nbconvert --to notebook --execute ipynb/iteration.ipynb
+            jupyter nbconvert --to notebook --execute ipynb/printing.ipynb
+            jupyter nbconvert --to notebook --execute ipynb/regex.ipynb
+            jupyter nbconvert --to notebook --execute ipynb/threading.ipynb
