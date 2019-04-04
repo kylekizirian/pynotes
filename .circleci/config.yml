@@ -11,7 +11,7 @@ jobs:
       - checkout
       - run:
           name: Create environment
-          command: conda create -n ci-env python=3.7 jupyter
+          command: conda create -n ci-env python=3.7 jupyter mypy
       - run:
           name: run notebooks
           command: |
@@ -25,4 +25,10 @@ jobs:
       - run:
           name: mypy checks
           command: |
+            source activate ci-env
             mypy py/types.py
+      - run:
+          name: doctest
+          command: |
+            source activate ci-env
+            python -m doctest py/types.py
