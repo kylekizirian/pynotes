@@ -22,3 +22,7 @@ jobs:
             jupyter nbconvert --to notebook --execute ipynb/printing.ipynb
             jupyter nbconvert --to notebook --execute ipynb/regex.ipynb
             jupyter nbconvert --to notebook --execute ipynb/threading.ipynb
+      - run:
+          name: mypy checks
+          command: |
+            mypy py/types.py
